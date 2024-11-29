@@ -1,0 +1,179 @@
+/* General Reset and Basic Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+  background: #004080; 
+  color: white;
+  padding: 20px 30px;
+}
+
+header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  background: #00509e;
+  transform: scale(1.05);
+}
+
+/* Courses Section */
+.courses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 40px 30px;
+}
+
+.course {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.course h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.course p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.course ul {
+  list-style-type: none;
+}
+
+.course ul li {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.course span img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #004080;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .courses {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Mobile Header */
+  header {
+      padding: 15px;
+  }
+
+  header h1 {
+      font-size: 24px;
+  }
+
+  nav {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .nav-links {
+      width: 100%;
+      margin-top: 10px;
+      justify-content: space-around;
+  }
+
+  .nav-links li {
+      margin: 5px 0;
+  }
+
+  /* Mobile Courses */
+  .courses {
+      grid-template-columns: 1fr;
+  }
+
+  .course {
+      padding: 15px;
+  }
+
+  .course h2 {
+      font-size: 20px;
+  }
+
+  .course p {
+      font-size: 14px;
+  }
+
+  .course ul li {
+      font-size: 12px;
+  }
+}
+
+/* For very small screens like mobile portrait */
+@media screen and (max-width: 480px) {
+  header h1 {
+      font-size: 20px;
+  }
+
+  .nav-links a {
+      font-size: 14px;
+      padding: 10px 15px;
+  }
+
+  .course span img {
+      width: 80px;
+  }
+}
